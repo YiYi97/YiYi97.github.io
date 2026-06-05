@@ -10,9 +10,6 @@ github: YiYi97
 url: https://YiYi97.github.io
 lang: zh-CN
 
-# 分页（每页显示文章数）
-paginate: 10
-
 # 时区
 timezone: Asia/Shanghai
 
