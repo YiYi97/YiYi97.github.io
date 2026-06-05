@@ -25,6 +25,8 @@ exclude:
   - .gitignore
   - Gemfile
   - Gemfile.lock
+  - 使用说明.md
+  - 文章模板.md
 
 # 默认 front matter
 defaults:
