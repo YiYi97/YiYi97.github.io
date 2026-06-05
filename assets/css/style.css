@@ -1,8 +1,7 @@
 /* ========================================
-   个人博客样式 - YiYi97
+   YiYi97 个人博客样式
    ======================================== */
 
-/* --- 基础重置 & 变量 --- */
 :root {
     --bg: #ffffff;
     --bg-secondary: #f8f9fa;
@@ -34,15 +33,9 @@
     --shadow-hover: 0 6px 24px rgba(0, 0, 0, 0.4);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
     font-family: var(--font-sans);
@@ -55,7 +48,7 @@ body {
     flex-direction: column;
 }
 
-/* --- 导航栏 --- */
+/* ---- 导航栏 ---- */
 .navbar {
     background: var(--bg);
     border-bottom: 1px solid var(--border);
@@ -85,9 +78,7 @@ body {
     letter-spacing: -0.5px;
 }
 
-.logo span {
-    color: var(--accent);
-}
+.logo span { color: var(--accent); }
 
 .nav-links {
     display: flex;
@@ -106,9 +97,7 @@ body {
 }
 
 .nav-links a:hover,
-.nav-links a.active {
-    color: var(--accent);
-}
+.nav-links a.active { color: var(--accent); }
 
 .nav-links a.active::after {
     content: '';
@@ -121,7 +110,6 @@ body {
     border-radius: 1px;
 }
 
-/* 主题切换按钮 */
 .theme-toggle {
     background: none;
     border: 2px solid var(--border);
@@ -142,7 +130,7 @@ body {
     transform: rotate(20deg);
 }
 
-/* --- 主内容区 --- */
+/* ---- 主内容 ---- */
 .main {
     flex: 1;
     max-width: var(--max-width);
@@ -151,7 +139,7 @@ body {
     width: 100%;
 }
 
-/* --- 首页头部 --- */
+/* ---- 首页头部 ---- */
 .hero {
     text-align: center;
     padding: 60px 0 40px;
@@ -185,7 +173,7 @@ body {
     margin-bottom: 4px;
 }
 
-/* --- 文章列表 --- */
+/* ---- 文章列表 ---- */
 .section-title {
     font-size: 1.2rem;
     font-weight: 600;
@@ -251,7 +239,7 @@ body {
     font-weight: 500;
 }
 
-/* --- 文章页 --- */
+/* ---- 文章页 ---- */
 .article-header {
     margin-bottom: 32px;
     padding-bottom: 24px;
@@ -276,9 +264,7 @@ body {
     line-height: 1.9;
 }
 
-.article-content p {
-    margin-bottom: 1.2em;
-}
+.article-content p { margin-bottom: 1.2em; }
 
 .article-content h2 {
     font-size: 1.4rem;
@@ -294,13 +280,9 @@ body {
 }
 
 .article-content ul,
-.article-content ol {
-    margin: 0.8em 0 1.2em 1.5em;
-}
+.article-content ol { margin: 0.8em 0 1.2em 1.5em; }
 
-.article-content li {
-    margin-bottom: 0.3em;
-}
+.article-content li { margin-bottom: 0.3em; }
 
 .article-content code {
     background: var(--bg-secondary);
@@ -319,10 +301,7 @@ body {
     border: 1px solid var(--border);
 }
 
-.article-content pre code {
-    background: none;
-    padding: 0;
-}
+.article-content pre code { background: none; padding: 0; }
 
 .article-content blockquote {
     border-left: 3px solid var(--accent);
@@ -340,9 +319,7 @@ body {
     transition: border-color 0.2s;
 }
 
-.article-content a:hover {
-    border-bottom-color: var(--accent);
-}
+.article-content a:hover { border-bottom-color: var(--accent); }
 
 .article-content img {
     max-width: 100%;
@@ -350,7 +327,6 @@ body {
     margin: 1.2em 0;
 }
 
-/* --- 返回链接 --- */
 .back-link {
     display: inline-flex;
     align-items: center;
@@ -362,23 +338,14 @@ body {
     transition: gap 0.2s;
 }
 
-.back-link:hover {
-    gap: 10px;
-}
+.back-link:hover { gap: 10px; }
 
-/* --- 关于页 --- */
-.about-section {
-    text-align: center;
-}
+/* ---- 关于页 ---- */
+.about-section { text-align: center; }
 
-.about-section .avatar {
-    margin-bottom: 24px;
-}
+.about-section .avatar { margin: 20px auto 24px; }
 
-.about-section h1 {
-    font-size: 1.8rem;
-    margin-bottom: 8px;
-}
+.about-section h1 { font-size: 1.8rem; margin-bottom: 8px; }
 
 .about-bio {
     color: var(--text-secondary);
@@ -416,7 +383,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* --- 页脚 --- */
+/* ---- 页脚 ---- */
 .footer {
     text-align: center;
     padding: 24px 20px;
@@ -425,34 +392,15 @@ body {
     border-top: 1px solid var(--border);
 }
 
-.footer a {
-    color: var(--accent);
-    text-decoration: none;
-}
+.footer a { color: var(--accent); text-decoration: none; }
 
-/* --- 响应式 --- */
+/* ---- 响应式 ---- */
 @media (max-width: 600px) {
-    .hero {
-        padding: 40px 0 24px;
-    }
-    .hero h1 {
-        font-size: 1.6rem;
-    }
-    .avatar {
-        width: 80px;
-        height: 80px;
-        font-size: 2rem;
-    }
-    .post-card {
-        padding: 18px;
-    }
-    .post-card h2 {
-        font-size: 1.1rem;
-    }
-    .article-header h1 {
-        font-size: 1.5rem;
-    }
-    .nav-links {
-        gap: 16px;
-    }
+    .hero { padding: 40px 0 24px; }
+    .hero h1 { font-size: 1.6rem; }
+    .avatar { width: 80px; height: 80px; font-size: 2rem; }
+    .post-card { padding: 18px; }
+    .post-card h2 { font-size: 1.1rem; }
+    .article-header h1 { font-size: 1.5rem; }
+    .nav-links { gap: 16px; }
 }

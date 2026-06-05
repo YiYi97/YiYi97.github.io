@@ -1,0 +1,38 @@
+# ========================
+# YiYi97 博客配置
+# ========================
+
+title: YiYi97 的博客
+description: 记录思考，分享生活 ✨
+author: YiYi97
+email: yiyi97@example.com
+github: YiYi97
+url: https://YiYi97.github.io
+lang: zh-CN
+
+# 分页（每页显示文章数）
+paginate: 10
+
+# 时区
+timezone: Asia/Shanghai
+
+# Markdown 引擎
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# 排除不需要处理的文件
+exclude:
+  - README.md
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+
+# 默认 front matter
+defaults:
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+      permalink: /:year/:month/:day/:title/

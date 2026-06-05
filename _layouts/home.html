@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<!-- 个人简介 -->
+<section class="hero">
+    <div class="avatar">Y</div>
+    <h1>{{ site.author }}</h1>
+    <p class="tagline">{{ site.description }}</p>
+    <p class="tagline" style="font-size:0.9rem;">—— 一个热爱技术与写作的空间</p>
+</section>
+
+<!-- 文章列表 -->
+<section>
+    <h2 class="section-title">📝 最新文章</h2>
+
+    {% if site.posts.size > 0 %}
+    <ul class="post-list">
+        {% for post in site.posts %}
+        <li>
+            <a href="{{ post.url | relative_url }}" class="post-card">
+                <h2>{{ post.title }}</h2>
+                <div class="post-meta">
+                    <span>📅 {{ post.date | date: "%Y-%m-%d" }}</span>
+                    {% if post.tags %}
+                    <span style="margin-left:12px;">
+                        🏷️
+                        {% for tag in post.tags %}
+                        <span class="post-tag">{{ tag }}</span>
+                        {% endfor %}
+                    </span>
+                    {% endif %}
+                </div>
+                {% if post.description %}
+                <p class="post-excerpt">{{ post.description }}</p>
+                {% else %}
+                <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+                {% endif %}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <div style="text-align:center; padding:40px; color:var(--text-secondary);">
+        <p>📭 还没有文章，马上开始写第一篇吧！</p>
+    </div>
+    {% endif %}
+</section>
